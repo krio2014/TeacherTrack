@@ -14,34 +14,49 @@ class person {
        $this->name = $aName;
        $this->dob = $aDob;
        $this->address = $aAddress;
-//            echo '<br/><b>Constructed</b><br/>';
+          /*
+          //Diagnostic code
+          echo '<br/><b>Person Object Constructed:</b><br/>';
+            echo $this->name.'<br/>';
+            echo $this->dob.'<br/>';
+            echo $this->address.'<br/>';
+        */
     }
+    
+    
     //Returns a string representation of this person object including reference number, Name, date of birth and address
     function toString(){
        return 'Ref: '.$this->personPK.'<br/>Name: '.$this->name.'<br/>Date of Birth: '.$this->dob.'<br/>Address: '.$this->address;
     }
     
+    
+    
     //Returns the name variable of this person object
-    public function getName(){
-       global $name;
-    
-       echo '<i><p/>|----returning person object name----|</i><p>';
-       return $this->name;
-       
-   }
-    
-    public function getName2(){
-        global $name;
+	public function getName(){
+		global $name;
+        /*    
+        //diagnostic code
+           echo '<i><p/>|----Returning person object name----|</i><br/>';
+    	*/
         
-        return $this->name;
-//        return $name;
-    }
+		return $this->name;
+	}
     
+   //Returns the date of birth of this person object
    function getDob(){
-       return $this->dob;
+        /*
+       //Diagnostic code
+        echo '<br/><i>|-----Returning person dob-----|</i><br/>';
+       */
+       return $this->dob;   
    }
-    
+   Returns the address of this person object
    function getAddress(){
+       /*
+       //Diagnostic code
+        echo '<br/><i>|-----Returning person address-----|</i><br/>';
+       */
+       
        return $this->address;
    }
        
