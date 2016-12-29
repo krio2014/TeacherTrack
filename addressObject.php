@@ -26,7 +26,7 @@ class address{
 
         $length = count($people)-1;
 
-        echo '<i>|---\'addressObject.php\': '.$aPerson->getName().' added at index ['.$length.']---|</i>';
+//        echo '<i>|---\'addressObject.php\': '.$aPerson->getName().' added at index ['.$length.']---|</i>';
 //        var_dump($people);
         return $this->people;
         
@@ -38,7 +38,7 @@ class address{
 	function getPerson($index){
 //        global $people;
 		
-        echo '<p><i>|----\'addressObject.php\':Person object returned at ['.$index.']----|</i><p/>';
+//        echo '<p><i>|----\'addressObject.php\':Person object returned at ['.$index.']----|</i><p/>';
         return $this->people[$index];
     }
 	
@@ -47,28 +47,14 @@ class address{
 		return $this->people;
 	}
 	
-	
-	
-	/* 
-	* Returns the people array
-	*/
-//    public function getPeople(){
-//       global $people;
-//
-//		//Diagnostic Code
-//		echo '<p><i>|----People array returned----|</i><p/>';
-//       
-//        
-//        return $this->people;
-//        
-//    }
+
 	
     /*
 	*	Returns the name of a person in the people array at the $index provided
 	*/
     function getPersonName($index){ 
         global $people;
-        echo '<p><i>|----Person object name returned ['.$index.']----|</i><p/>';
+//        echo '<p><i>|----Person object name returned ['.$index.']----|</i><p/>';
         return $this->people[$index]->getName();
         
     }

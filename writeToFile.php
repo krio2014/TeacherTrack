@@ -6,12 +6,12 @@
 */
 function testLog($array){
 
-//$arr = array(1, 2, 3, 4);
+//var_dump($array);
 //$myfile = fopen("testingLog.txt", "w") or die("Unable to open file!");
 	file_put_contents("Log.txt", "\r\n=====Begin test====\r\n", FILE_APPEND);
 	foreach ($array as &$value) 
 	{
-		
+//		var_dump($value);
 		$date =  date("Y-m-d H:i:s");   
 //		echo 'array'.$array($line);
 		$text = $date.': '.$value."\r\n";

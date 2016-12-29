@@ -1,41 +1,44 @@
 
 =====Begin test====
-2016-12-29 15:02:21: testPersonObject: getName() - adam
-2016-12-29 15:02:21: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:02:21: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:21:56: Steve
+2016-12-29 16:21:56: 19/10/1957
+2016-12-29 16:21:56: 30 pollard road
 =====end test====
 =====Begin test====
-2016-12-29 15:04:05: testPersonObject: getName() - adam
-2016-12-29 15:04:05: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:04:05: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:22:54: Steve
+2016-12-29 16:22:54: 19/10/1957
+2016-12-29 16:22:54: 30 pollard road
 =====end test====
 =====Begin test====
-2016-12-29 15:06:35: SUCCESS: testPersonObject: getName() - adam
-2016-12-29 15:06:35: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:06:35: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:23:40: Steve
+2016-12-29 16:23:40: 19/10/1957
+2016-12-29 16:23:40: 30 pollard road
 =====end test====
 =====Begin test====
-2016-12-29 15:07:23: SUCCESS: testPersonObject: getName() - adam
-2016-12-29 15:07:23: SUCCESS: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:07:23: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:24:02: Steve
+2016-12-29 16:24:02: 19/10/1957
+2016-12-29 16:24:02: 30 pollard road
 =====end test====
 =====Begin test====
-2016-12-29 15:07:31: SUCCESS: testPersonObject: getName() - adam
-2016-12-29 15:07:31: SUCCESS: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:07:31: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:24:18: Steve
+2016-12-29 16:24:18: 19/10/1957
+2016-12-29 16:24:18: 30 pollard road
 =====end test====
 =====Begin test====
-2016-12-29 15:07:35: SUCCESS: testPersonObject: getName() - adam
-2016-12-29 15:07:35: SUCCESS: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:07:35: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:24:22: Steve
+2016-12-29 16:24:22: 19/10/1957
+2016-12-29 16:24:22: 30 pollard road
 =====end test====
 =====Begin test====
-2016-12-29 15:08:57: SUCCESS: testPersonObject: getName() - adam
-2016-12-29 15:08:57: SUCCESS: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:08:57: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:24:53: SUCCESS: testStudentObject - constructor
+2016-12-29 16:24:53: Ref: 2<br/>Name: Steve<br/>Date of Birth: 19/10/1957<br/> Address: 30 pollard road<br/>Year Group:4a<br/>Tutor Group:4a
 =====end test====
 =====Begin test====
-2016-12-29 15:09:17: SUCCESS: testPersonObject: getName() - adam
-2016-12-29 15:09:17: SUCCESS: textPersonObject: getDob() - 03/06/1987
-2016-12-29 15:09:17: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+2016-12-29 16:25:28: SUCCESS: testStudentObject - constructor
+2016-12-29 16:25:28: SUCCESS: testStudentObject: toString() - Ref: 2<br/>Name: Steve<br/>Date of Birth: 19/10/1957<br/> Address: 30 pollard road<br/>Year Group:4a<br/>Tutor Group:4a
+=====end test====
+=====Begin test====
+2016-12-29 16:25:53: SUCCESS: testStudentObject - constructor
+2016-12-29 16:25:53: SUCCESS: testStudentObject: toString() - 
+Ref: 2<br/>Name: Steve<br/>Date of Birth: 19/10/1957<br/> Address: 30 pollard road<br/>Year Group:4a<br/>Tutor Group:4a
 =====end test====

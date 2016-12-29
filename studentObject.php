@@ -1,5 +1,5 @@
 <?php
-
+require_once 'personObject.php';
 
 class student extends person{
 
@@ -15,7 +15,7 @@ class student extends person{
         $this->yearGroup = "4a";
         $this->tutorGroup = "4a";
         //Diagnostic code
-        echo '<br/><b>Student object Constructed</b><br/>';
+//        echo '<br/><b>Student object Constructed</b><br/>';
 
         echo'<p>';
     }
