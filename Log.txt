@@ -1,0 +1,41 @@
+
+=====Begin test====
+2016-12-29 15:02:21: testPersonObject: getName() - adam
+2016-12-29 15:02:21: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:02:21: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====
+=====Begin test====
+2016-12-29 15:04:05: testPersonObject: getName() - adam
+2016-12-29 15:04:05: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:04:05: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====
+=====Begin test====
+2016-12-29 15:06:35: SUCCESS: testPersonObject: getName() - adam
+2016-12-29 15:06:35: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:06:35: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====
+=====Begin test====
+2016-12-29 15:07:23: SUCCESS: testPersonObject: getName() - adam
+2016-12-29 15:07:23: SUCCESS: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:07:23: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====
+=====Begin test====
+2016-12-29 15:07:31: SUCCESS: testPersonObject: getName() - adam
+2016-12-29 15:07:31: SUCCESS: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:07:31: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====
+=====Begin test====
+2016-12-29 15:07:35: SUCCESS: testPersonObject: getName() - adam
+2016-12-29 15:07:35: SUCCESS: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:07:35: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====
+=====Begin test====
+2016-12-29 15:08:57: SUCCESS: testPersonObject: getName() - adam
+2016-12-29 15:08:57: SUCCESS: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:08:57: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====
+=====Begin test====
+2016-12-29 15:09:17: SUCCESS: testPersonObject: getName() - adam
+2016-12-29 15:09:17: SUCCESS: textPersonObject: getDob() - 03/06/1987
+2016-12-29 15:09:17: SUCCESS: testPersonObject: getAddress() - 328 Worle moor Road
+=====end test====

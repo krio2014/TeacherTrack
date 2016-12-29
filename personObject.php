@@ -14,7 +14,8 @@ class person {
        $this->name = $aName;
        $this->dob = $aDob;
        $this->address = $aAddress;
-          /*
+          
+		/*
           //Diagnostic code
           echo '<br/><b>Person Object Constructed:</b><br/>';
             echo $this->name.'<br/>';
@@ -50,7 +51,7 @@ class person {
        */
        return $this->dob;   
    }
-   Returns the address of this person object
+   //Returns the address of this person object
    function getAddress(){
        /*
        //Diagnostic code

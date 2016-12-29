@@ -22,47 +22,58 @@ class address{
     public function addPerson($aPerson){
         global $people;
         
-        $people[] = $aPerson;
+        $this->people[] = $aPerson;
 
         $length = count($people)-1;
 
-        echo '<i>|---'.$aPerson->getName().' added at index ['.$length.']---|</i>';
+        echo '<i>|---\'addressObject.php\': '.$aPerson->getName().' added at index ['.$length.']---|</i>';
+//        var_dump($people);
+        return $this->people;
         
-        return true;
-        
-    }
-	
-	
+    }	
 	
 	/*
     * returns a person object from the people array at the provided index
     */
 	function getPerson($index){
-        global $people;
-        echo '<p><i>|----Person object returned at ['.$index.']----|</i><p/>';
-        return $people[$index];
+//        global $people;
+		
+        echo '<p><i>|----\'addressObject.php\':Person object returned at ['.$index.']----|</i><p/>';
+        return $this->people[$index];
     }
+	
     
+	public function getPeople(){
+		return $this->people;
+	}
+	
+	
+	
+	/* 
+	* Returns the people array
+	*/
+//    public function getPeople(){
+//       global $people;
+//
+//		//Diagnostic Code
+//		echo '<p><i>|----People array returned----|</i><p/>';
+//       
+//        
+//        return $this->people;
+//        
+//    }
+	
     /*
 	*	Returns the name of a person in the people array at the $index provided
 	*/
     function getPersonName($index){ 
         global $people;
         echo '<p><i>|----Person object name returned ['.$index.']----|</i><p/>';
-        return $this->people[$index]->getName;
+        return $this->people[$index]->getName();
         
     }
     
-    /* 
-	* Returns the people array
-	*/
-    public function getPeople(){
-        echo '<p><i>|----People array returned----|</i><p/>';
-       global $people;
-        var_dump($this->people);
-        return $people;
-        
-    }
+    
     
     
     
