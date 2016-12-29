@@ -57,3 +57,21 @@ Ref: 2<br/>Name: Steve<br/>Date of Birth: 19/10/1957<br/> Address: 30 pollard ro
 2016-12-29 21:07:26: SUCCESS: testStudentObject: toString() - 
 Ref: 2<br/>Name: Steve<br/>Date of Birth: 19/10/1957<br/> Address: 30 pollard road<br/>Year Group:4a<br/>Tutor Group:4a
 =====end test====
+=====Begin test====
+2016-12-29 21:57:36: SUCCESS: testAddressObject: construct()
+2016-12-29 21:57:36: SUCCESS: testAddressObject: addPerson()
+2016-12-29 21:57:36: SUCCESS: testAddressObject: getPeople()
+2016-12-29 21:57:36: SUCCESS: testAddressObject: getPersonName() - adam
+=====end test====
+=====Begin test====
+2016-12-29 22:06:49: SUCCESS: testAddressObject: construct()
+2016-12-29 22:06:49: SUCCESS: testAddressObject: addPerson()
+2016-12-29 22:06:49: SUCCESS: testAddressObject: getPeople()
+2016-12-29 22:06:49: SUCCESS: testAddressObject: getPersonName() - adam
+=====end test====
+=====Begin test====
+2016-12-29 22:07:43: SUCCESS: testAddressObject: construct()
+2016-12-29 22:07:43: SUCCESS: testAddressObject: addPerson()
+2016-12-29 22:07:43: SUCCESS: testAddressObject: getPeople()
+2016-12-29 22:07:43: SUCCESS: testAddressObject: getPersonName() - adam
+=====end test====
