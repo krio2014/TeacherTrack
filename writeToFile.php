@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('UTC');
 /*
 * testinglog takes an array of strings that are the results of some tests performed from an external file.
 * Each element in the array is seperated and output to a file called testingLog.txt

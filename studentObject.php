@@ -6,8 +6,10 @@ class student extends person{
     
     protected $yearGroup;
     protected $tutorGroup;
+    protected $subject;
 
-    public function __construct($aName,$aDob,$aAddress){
+    public function __construct($aName,$aDob,$aAddress)
+    {
         $this->personPK = 2;
         $this->name = $aName;
         $this->dob = $aDob;
@@ -22,8 +24,15 @@ class student extends person{
     
     
     
-    function toString(){
+    function toString()
+    {
        return 'Ref: '.$this->personPK.'<br/>Name: '.$this->name.'<br/>Date of Birth: '.$this->dob.'<br/> Address: '.$this->address.'<br/>Year Group:'.$this->yearGroup.'<br/>Tutor Group:'.$this->tutorGroup;
+    }
+    
+    
+    function addSubject()
+    {
+        
     }
 
     

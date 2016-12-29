@@ -35,6 +35,13 @@ require 'writeToFile.php';
 	*/
 	$testResult = array($studentResult,$toStringResult);
 
+    /*
+    *   Test addSubject()
+    */
+
+    
+
+
 	/*
 	*	write out to log file
 	*/
