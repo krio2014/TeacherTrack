@@ -8,13 +8,16 @@ class subject{
     * including their details.
     */
     public $studentList = array();
+    public $gradeList = array("A","A*","B","C","D","E","F","U");
     
     /*
     *   Constructor
     */
     public function __construct()
     {
-        
+        $gradeList(
+            
+            );
         return true;
         
     }

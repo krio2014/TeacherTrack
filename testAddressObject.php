@@ -8,6 +8,7 @@ require 'writeToFile.php';
 	*	create new person object for tests
 	*/
 	$person = new person("adam","03/06/1987", "328 worle moor road");
+$person = new person("adam1","03/06/1988", "328 worle moor roads");
 
 
 	/*
@@ -77,10 +78,10 @@ require 'writeToFile.php';
 
 
 //$testResult= $getName."\n".$getDob."\n".$getAddress."\n";
-$testResultArray = array($constructResult,$addPersonResult, $getPeopleResult,$getPersonNameResult);
+//$testResultArray = array($constructResult,$addPersonResult, $getPeopleResult,$getPersonNameResult);
 //var_dump($testResultArray);
 
-testLog($testResultArray);
+//testLog($testResultArray);
 echo "<strong>==Test Complete==</strong>";
 
 ?>
