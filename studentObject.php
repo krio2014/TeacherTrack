@@ -16,8 +16,7 @@ class student extends person{
         $this->address = $aAddress;
         $this->yearGroup = "4a";
         $this->tutorGroup = "4a";
-        //Diagnostic code
-//        echo '<br/><b>Student object Constructed</b><br/>';
+        $this->subject = array();
 
         echo'<p>';
     }

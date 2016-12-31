@@ -20,7 +20,24 @@ class address{
         $this->people[] = $aPerson;
         $length = count($people)-1;
         return $this->people;    
-    }	
+    }
+    
+    /*
+    *   Removes the selected person from the people array
+    */
+    public function removePerson($aPerson)
+    {
+        echo 'gets here';
+        if($this->people[$aPerson])
+        {
+            unset($this->people[$aPerson]);
+            echo $aPerson.' removed';
+        }
+        else
+        {
+            echo $aPerson.' does not exist';
+        }
+    }
 	
 	/*
     * returns a person object from the people array at the provided index
