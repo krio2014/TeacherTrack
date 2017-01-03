@@ -34,8 +34,7 @@ class person {
     
     //Returns the name variable of this person object
 	public function getName(){
-		global $name;
-        /*    
+		 /*    
         //diagnostic code
            echo '<i><p/>|----Returning person object name----|</i><br/>';
     	*/
