@@ -7,7 +7,7 @@ class subject{
     * StudentList variable is an array that contains all the subjects
     * including their details.
     */
-    public $studentList = array();
+    public $subjectList = array();
     public $gradeList = array("A","A*","B","C","D","E","F","U");
     
     /*
@@ -15,6 +15,9 @@ class subject{
     */
     public function __construct()
     {
+        $this->subjectList[] = "Maths";
+        $this->subjectList[] = "Maths1";
+        
         
         return true;
         
@@ -33,31 +36,39 @@ class subject{
     /*
     *   Adds a new subject to the subjectList array with the aName and aYear and length.
     */
-    public function addSubject($subjectName,$subjectYear,$subjectLength)
-    {
-        $this->subjectList[$subjectName] = array(year=>$subjectYear,length=>$subjectLength);
-    }
+//    public function addSubject($subjectName,$subjectYear,$subjectLength)
+//    {
+//        $this->subjectList[$subjectName] = array(year=>$subjectYear,length=>$subjectLength);
+//    }
     
     /*
     *   returns aSubject details as an array
     */
-    public function getSubject($aSubject)
+//    public function getSubject($aSubject)
+//    {
+//        $keys= array_keys($this->subjectList);
+//        $resultArray = null;
+//        foreach ($keys as $key)
+//        {
+//            if($aSubject == $key)
+//            {
+//				return true;
+////               $resultArray= $this->subjectList[$aSubject];
+////               return $resultArray;
+//            }
+//            else
+//            {
+//                return false;
+//            }
+//        }
+//    }
+    
+    public function getSubjectList()
     {
-        $keys= array_keys($this->subjectList);
-        $resultArray = null;
-        foreach ($keys as $key)
-        {
-            if($aSubject == $key)
-            {
-				return true;
-//               $resultArray= $this->subjectList[$aSubject];
-//               return $resultArray;
-            }
-            else
-            {
-                return false;
-            }
-        }
+//        var_dump($this->subjectList);
+//        $result = $this->subjectList;
+//        return $result;
+        return $this->subjectList;
     }
 
 
