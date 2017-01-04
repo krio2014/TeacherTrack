@@ -4,60 +4,63 @@ class person {
     
     //person properties
     protected $personPK;
-    private $name;
+    private $fullName;
     private $dob;
     private $address;
+    private $postCode;
+    private $phoneNumber;
+    private $mobileNumber;
+    private $emailAddress;
     
     //Constructs a new person object with a Name, Date of Birth and address
-    public function __construct($aName,$aDob, $aAddress){
+    public function __construct($aName,$aDob, $aAddress,$aPostCode,$aPhoneNumber,$aMobileNumber, $aEmailAddress)
+    {
        $this->personPK = 1;
-       $this->name = $aName;
-       $this->dob = $aDob;
-       $this->address = $aAddress;
-          
-		/*
-          //Diagnostic code
-          echo '<br/><b>Person Object Constructed:</b><br/>';
-            echo $this->name.'<br/>';
-            echo $this->dob.'<br/>';
-            echo $this->address.'<br/>';
-        */
+        $this->fullName = $aName;
+        $this->dob = $aDob;
+        $this->address = $aAddress;
+        $this->postCode = $aPostCode;
+        $this->phoneNumber = $aPhoneNumber;
+        $this->mobileNumber = $aMobileNumber;
+        $this->emailAddress = $aEmailAddress;
     }
     
     
     //Returns a string representation of this person object including reference number, Name, date of birth and address
-    function toString(){
-       return 'Ref: '.$this->personPK.'<br/>Name: '.$this->name.'<br/>Date of Birth: '.$this->dob.'<br/>Address: '.$this->address;
+    function toString()
+    {
+       return 'Ref: '.$this->personPK.'<br/>Name: '.$this->fullName.'<br/>Date of Birth: '.$this->dob.'<br/>Address: '.$this->address.'<br/>Postcode: '.$this->postCode.'<br/>Phone Number: '.$this->phoneNumber.'<br/>Mobile Number: '.$this->mobileNumber.'<br/>Email Address: '.$this->emailAddress;
+        
+        
+        
+
     }
     
-    
-    
     //Returns the name variable of this person object
-	public function getName(){
-		 /*    
-        //diagnostic code
-           echo '<i><p/>|----Returning person object name----|</i><br/>';
-    	*/
-        
-		return $this->name;
+	public function getName()
+    {
+		return $this->fullName;
 	}
     
    //Returns the date of birth of this person object
-   function getDob(){
-        /*
-       //Diagnostic code
-        echo '<br/><i>|-----Returning person dob-----|</i><br/>';
-       */
+   function getDob()
+   {
        return $this->dob;   
    }
-   //Returns the address of this person object
-   function getAddress(){
-       /*
-       //Diagnostic code
-        echo '<br/><i>|-----Returning person address-----|</i><br/>';
-       */
-       
-       return $this->address;
+    
+   /*
+   * If the parameter passed is equal to true then a string prepresentation of the address and the postcode is returned, else just the value of the address is * returned
+   */
+   function getAddress($boolean)
+   {
+       if($boolean == true)
+       {
+           return $this->address.'<br/>'.$this->postCode;
+       }
+       else
+       {
+           return $this->address;
+       }
    }
        
 }

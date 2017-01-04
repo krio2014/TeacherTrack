@@ -15,9 +15,7 @@ class subject{
     */
     public function __construct()
     {
-        $gradeList(
-            
-            );
+        
         return true;
         
     }
