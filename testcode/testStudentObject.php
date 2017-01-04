@@ -1,8 +1,8 @@
 <?php
-//require 'personObject.php';
-require 'studentObject.php';
-require 'addressObject.php';
-require 'writeToFile.php';
+//require '../personObject.php';
+require '../studentObject.php';
+require '../addressObject.php';
+require '../writeToFile.php';
 
 	/*
 	*	Test student constuctor

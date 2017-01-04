@@ -1,7 +1,7 @@
 <?php
 
-require 'subjectObject.php';
-require 'writeToFile.php';
+require '../subjectObject.php';
+require '../writeToFile.php';
 echo '<pre>';
 
 /*

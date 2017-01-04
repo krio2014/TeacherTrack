@@ -1,8 +1,8 @@
 <?php
-require 'addressObject.php';
+require '../addressObject.php';
 //require 'testPersonObject.php';
-require 'personObject.php';
-require 'writeToFile.php';
+require '../personObject.php';
+require '../writeToFile.php';
 
 echo '<pre>';
 	/*

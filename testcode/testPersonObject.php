@@ -1,7 +1,7 @@
 <?php
 
-require 'personObject.php';
-require 'writeToFile.php';
+require '../personObject.php';
+require '../writeToFile.php';
 
 $person = new person("adam","03/06/1987", "328 Worle moor Road");
 

@@ -51,8 +51,9 @@ class subject{
         {
             if($aSubject == $key)
             {
-               $resultArray= $this->subjectList[$aSubject];
-               return $resultArray;
+				return true;
+//               $resultArray= $this->subjectList[$aSubject];
+//               return $resultArray;
             }
             else
             {

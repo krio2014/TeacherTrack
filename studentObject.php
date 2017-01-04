@@ -29,9 +29,9 @@ class student extends person{
     }
     
     
-    function addSubject()
+    function addSubject($aSubject)
     {
-        
+        if()
     }
 
     
