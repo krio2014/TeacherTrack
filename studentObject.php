@@ -3,6 +3,8 @@ require_once 'personObject.php';
 require_once 'subjectObject.php';
 require_once 'index2.php';
 
+//This class inherits from personObject.php so will implement all variables from there.
+
 class student extends person{
 
     
@@ -29,31 +31,40 @@ class student extends person{
     }
     
     
-    
+    /*
+	*	Returns a string representation of $this student object.
+	*/
     function toString()
     {
            return 'Ref: '.$this->personPK.'<br/>Name: '.$this->fullName.'<br/>Date of Birth: '.$this->dob.'<br/>Address: '.$this->address.'<br/>Postcode: '.$this->postCode.'<br/>Phone Number: '.$this->phoneNumber.'<br/>Mobile Number: '.$this->mobileNumber.'<br/>Email Address: '.$this->emailAddress.'<br/>Year Group:'.$this->yearGroup.'<br/>Tutor Group:'.$this->tutorGroup.'<br/>Subject: '.$this->subject;
     }
     
-    
+    /*
+	*	Adds the specified subject to the subject list
+	*/
     function addSubject($aSubject,$aSubjectList)
     {
-//        var_dump($aSubjectList);
+        var_dump($aSubjectList);
+        var_dump($subject);
         
+		
+		
         try
         {
             foreach($aSubjectList as $subject)
             {
-
+				
+				
                 if($subject == $aSubject)
                 {
-                    echo $aSubject." exists<p>";
+
+                    echo $aSubject." true<p>";
                     $this->enrolledSubjects[] = $aSubject;
 //                    var_dump($this->enrolledSubjects);
                 }
                 else
                 {
-                    echo $aSubject." does not exist<p>";
+                    echo $aSubject." false<p>";
                 }
 
             }
@@ -64,7 +75,9 @@ class student extends person{
         }
         
     }
-
+	/*
+	*	returns the subjects that $this student is enrolled on.
+	*/
     function getEnrolledSubjects()
     {
 //        var_dump($this->enrolledSubjects);
