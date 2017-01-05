@@ -26,8 +26,7 @@ class student extends person{
         //student specific variable assignment
         $this->yearGroup = "4a";
         $this->tutorGroup = "4a";
-        $this->enrolledSubjects = array();
-        
+        $this->enrolledSubjects = array(); 
     }
     
     
@@ -43,30 +42,21 @@ class student extends person{
 	*	Adds the specified subject to the subject list
 	*/
     public function addSubject($aSubject,$aSubjectList)
-    {
-//        var_dump($aSubjectList);
-//        var_dump($aSubject);
+    {	
         
-		
-		
         try
         {
             foreach($aSubjectList as $subject)
             {
-				
+//				var_dump($subject);
 				
                 if($subject == $aSubject)
                 {
-
-//                    echo $aSubject." true<p>";
                     $this->enrolledSubjects[] = $aSubject;
+                    
+                    echo 'Succesfully added '.$subject.' to '.$this->fullName.'<p/>';
 //                    var_dump($this->enrolledSubjects);
                 }
-                else
-                {
-//                    echo $aSubject." false<p>";
-                }
-
             }
         }
         catch(Exception $e)
@@ -75,20 +65,27 @@ class student extends person{
         }
         
     }
+    
+    /*
+    *   Removes the specified subject from $enrolledSubjects
+    */
+    public function removeSubject($aSubject)
+    {
+        $key = array_search($aSubject,$this->enrolledSubjects);
+        if(in_array($aSubject, $this->enrolledSubjects))
+        {            
+            unset($this->enrolledSubjects[$key]);
+            echo 'Succesfully removed '.$aSubject.' from '.$this->fullName.'<p/>';
+        }
+    }
+    
 	/*
 	*	returns the subjects that $this student is enrolled on.
 	*/
     public function getEnrolledSubjects()
     {
-//        var_dump($this->enrolledSubjects);
         return $this->enrolledSubjects;
     }
-    
-    
-
-
-
-
 }
 
 

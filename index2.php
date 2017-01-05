@@ -16,10 +16,17 @@ $var1 = $subject->getSubjectList();
 
 $student->addSubject("Maths",$var1);
 $student->addSubject("Maths1",$var1);
+$student->addSubject("History",$var1);
+$student->removeSubject("History");
 
 $es = $student->getEnrolledSubjects();
+//var_dump($es);
+
+
 //foreach($es as $subject)
-//{echo '<p>'.$subject;}
+//{
+//    echo '<p>subject = '.$subject;
+//}
 //var_dump($es);
 
 

@@ -16,7 +16,10 @@ class subject{
     public function __construct()
     {
         $this->subjectList[] = "Maths";
-        $this->subjectList[] = "Maths1";
+        $this->subjectList[] = "Science";
+        $this->subjectList[] = "Geography";
+        $this->subjectList[] = "History";
+        $this->subjectList[] = "English";
         
         
         return true;
@@ -65,9 +68,6 @@ class subject{
     
     public function getSubjectList()
     {
-//        var_dump($this->subjectList);
-//        $result = $this->subjectList;
-//        return $result;
         return $this->subjectList;
     }
 
