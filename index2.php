@@ -18,8 +18,8 @@ $student->addSubject("Maths",$var1);
 $student->addSubject("Maths1",$var1);
 
 $es = $student->getEnrolledSubjects();
-foreach($es as $subject)
-{echo '<p>'.$subject;}
+//foreach($es as $subject)
+//{echo '<p>'.$subject;}
 //var_dump($es);
 
 

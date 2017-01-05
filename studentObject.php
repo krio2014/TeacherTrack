@@ -34,7 +34,7 @@ class student extends person{
     /*
 	*	Returns a string representation of $this student object.
 	*/
-    function toString()
+    public function toString()
     {
            return 'Ref: '.$this->personPK.'<br/>Name: '.$this->fullName.'<br/>Date of Birth: '.$this->dob.'<br/>Address: '.$this->address.'<br/>Postcode: '.$this->postCode.'<br/>Phone Number: '.$this->phoneNumber.'<br/>Mobile Number: '.$this->mobileNumber.'<br/>Email Address: '.$this->emailAddress.'<br/>Year Group:'.$this->yearGroup.'<br/>Tutor Group:'.$this->tutorGroup.'<br/>Subject: '.$this->subject;
     }
@@ -42,10 +42,10 @@ class student extends person{
     /*
 	*	Adds the specified subject to the subject list
 	*/
-    function addSubject($aSubject,$aSubjectList)
+    public function addSubject($aSubject,$aSubjectList)
     {
-        var_dump($aSubjectList);
-        var_dump($subject);
+//        var_dump($aSubjectList);
+//        var_dump($aSubject);
         
 		
 		
@@ -58,13 +58,13 @@ class student extends person{
                 if($subject == $aSubject)
                 {
 
-                    echo $aSubject." true<p>";
+//                    echo $aSubject." true<p>";
                     $this->enrolledSubjects[] = $aSubject;
 //                    var_dump($this->enrolledSubjects);
                 }
                 else
                 {
-                    echo $aSubject." false<p>";
+//                    echo $aSubject." false<p>";
                 }
 
             }
@@ -78,7 +78,7 @@ class student extends person{
 	/*
 	*	returns the subjects that $this student is enrolled on.
 	*/
-    function getEnrolledSubjects()
+    public function getEnrolledSubjects()
     {
 //        var_dump($this->enrolledSubjects);
         return $this->enrolledSubjects;

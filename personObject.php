@@ -44,16 +44,17 @@ class person {
    /*
    *	Returns the date of birth of this person object
    */
-	function getDob()
+	public function getDob()
     {
        return $this->dob;   
     }
     
    /*
-   *	If the parameter passed is equal to true then a string prepresentation of the address and the 
+   *	If the parameter passed is equal to true then a string prepresentation
+   *	of the address and the 
    *	postcode is *returned, else just the value of the address is returned
    */
-    function getAddress($boolean)
+    public function getAddress($boolean)
     {
        if($boolean == true)
        {
@@ -64,10 +65,11 @@ class person {
            return $this->address;
        }
     }
+	
     /*
     *   returns the value of $phoneNumber
     */
-    function getPhoneNumber()
+    public function getPhoneNumber()
     {
         return $this->phoneNumber;
     }
@@ -75,7 +77,7 @@ class person {
     /*
     *   returns the value of $mobileNumber
     */
-    function getMobileNumber()
+    public function getMobileNumber()
     {
         return $this->mobileNumber;
     }
@@ -83,7 +85,7 @@ class person {
     /*
     *   returns the value of $emailAddress
     */
-    function getEmailAddress()
+    public function getEmailAddress()
     {
         return $this->emailAddress;
     }
