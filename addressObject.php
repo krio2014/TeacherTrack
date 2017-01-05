@@ -7,7 +7,7 @@ class address{
     //Constructs a new address object
     public function __construct()
     {
-//        global $people;
+        return true;
     }
 
 	/* adds a person object provided by $aPerson
@@ -16,7 +16,6 @@ class address{
 	*/
     public function addPerson($aPerson)
     {
-        global $people;
         $this->people[] = $aPerson;
         $length = count($people)-1;
         return $this->people;    
