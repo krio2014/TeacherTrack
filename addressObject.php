@@ -7,7 +7,8 @@ class address{
     //Constructs a new address object
     public function __construct()
     {
-        return true;
+        $this->people = array();
+		return true;
     }
 
 	/* adds a person object provided by $aPerson
@@ -53,12 +54,5 @@ class address{
     {
 		return $this->people;
 	}
-		
-    /*
-	*	Returns the name of a person in the people array at the $index provided
-	*/
-    function getPersonName($index)
-    {    
-        return $this->people[$index]->getName();   
-    }
+	
 }
