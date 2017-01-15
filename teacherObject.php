@@ -6,6 +6,7 @@ class teacher extends person{
     
  public function __construct(){
      $this->lessonList = array();
+     
 }
 
     public function addLesson($aLesson){

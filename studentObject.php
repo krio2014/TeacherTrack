@@ -7,10 +7,10 @@ require_once 'index2.php';
 
 class student extends person{
 
-    
+    //Student specific variables
     protected $yearGroup;
     protected $tutorGroup;
-    protected $enrolledSubjects;
+    
 
     public function __construct($aName,$aDob,$aAddress,$aPostCode,$aPhoneNumber,$aMobileNumber, $aEmailAddress)
     {
@@ -48,14 +48,14 @@ class student extends person{
         {
             foreach($aSubjectList as $subject)
             {
-//				var_dump($subject);
+
 				
                 if($subject == $aSubject)
                 {
                     $this->enrolledSubjects[] = $aSubject;
                     
                     echo 'Succesfully added '.$subject.' to '.$this->fullName.'<p/>';
-//                    var_dump($this->enrolledSubjects);
+
                 }
             }
         }

@@ -15,7 +15,7 @@ class person {
     //Constructs a new person object with a Name, Date of Birth and address
     public function __construct($aName,$aDob, $aAddress,$aPostCode,$aPhoneNumber,$aMobileNumber, $aEmailAddress)
     {
-       $this->personPK = 1;
+        $this->personPK = 1;
         $this->fullName = $aName;
         $this->dob = $aDob;
         $this->address = $aAddress;
