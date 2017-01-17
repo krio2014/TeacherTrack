@@ -83,4 +83,9 @@ class address{
 		return $this->people;
 	}
 	
+    function getLength()
+	{
+			
+		return count($this->people);
+	}
 }
