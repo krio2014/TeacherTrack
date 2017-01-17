@@ -13,16 +13,29 @@ class person {
     private $emailAddress;
     
     //Constructs a new person object with a Name, Date of Birth and address
-    public function __construct($aName,$aDob, $aAddress,$aPostCode,$aPhoneNumber,$aMobileNumber, $aEmailAddress)
+    
+    
+    //$aName,$aDob, $aAddress,$aPostCode,$aPhoneNumber,$aMobileNumber, $aEmailAddress
+    public function __construct($anArray)
     {
-        $this->personPK = 1;
-        $this->fullName = $aName;
-        $this->dob = $aDob;
-        $this->address = $aAddress;
-        $this->postCode = $aPostCode;
-        $this->phoneNumber = $aPhoneNumber;
-        $this->mobileNumber = $aMobileNumber;
-        $this->emailAddress = $aEmailAddress;
+        
+        $this->fullName = $anArray[0];
+	 $this->dob = $anArray[1];
+	 $this->address = $anArray[2];
+	 $this->postCode = $anArray[3];
+	 $this->phoneNumber = $anArray[4];
+	 $this->mobileNumber = $anArray[5];
+	 $this->emailAddress = $anArray[6];
+        
+        
+//        $this->personPK = 1;
+//        $this->fullName = $aName;
+//        $this->dob = $aDob;
+//        $this->address = $aAddress;
+//        $this->postCode = $aPostCode;
+//        $this->phoneNumber = $aPhoneNumber;
+//        $this->mobileNumber = $aMobileNumber;
+//        $this->emailAddress = $aEmailAddress;
     }
     
     /*

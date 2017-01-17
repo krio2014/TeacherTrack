@@ -12,16 +12,20 @@ class student extends person{
     protected $tutorGroup;
     
 
-    public function __construct($aName,$aDob,$aAddress,$aPostCode,$aPhoneNumber,$aMobileNumber, $aEmailAddress)
+    public function __construct($anArray)
     {
+        
+        $this->fullName = $anArray[0];
+	   $this->dob = $anArray[1];
+	   $this->address = $anArray[2];
+	   $this->postCode = $anArray[3];
+	   $this->phoneNumber = $anArray[4];
+	   $this->mobileNumber = $anArray[5];
+	   $this->emailAddress = $anArray[6];
+        
+    
+        //auto generated 
         $this->personPK = 2;
-        $this->fullName = $aName;
-        $this->dob = $aDob;
-        $this->address = $aAddress;
-        $this->postCode = $aPostCode;
-        $this->phoneNumber = $aPhoneNumber;
-        $this->mobileNumber = $aMobileNumber;
-        $this->emailAddress = $aEmailAddress;
         
         //student specific variable assignment
         $this->yearGroup = "4a";
