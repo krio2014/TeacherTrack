@@ -4,7 +4,18 @@ class teacher extends person{
  
     private $lessonList;
     
- public function __construct(){
+ public function __construct($anArray){
+     
+      $this->fullName = $anArray[0];
+	   $this->dob = $anArray[1];
+	   $this->address = $anArray[2];
+	   $this->postCode = $anArray[3];
+	   $this->phoneNumber = $anArray[4];
+	   $this->mobileNumber = $anArray[5];
+	   $this->emailAddress = $anArray[6];
+     
+     
+     
      $this->lessonList = array();
      
 }
