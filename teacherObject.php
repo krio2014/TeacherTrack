@@ -2,18 +2,18 @@
 
 class teacher extends person{
  
-    private $lessonList;
+    protected $lessonList;
     
  public function __construct($anArray){
      
      // generic person object variables 
-     $this->fullName = $anArray[0];
-	   $this->dob = $anArray[1];
-	   $this->address = $anArray[2];
-	   $this->postCode = $anArray[3];
-	   $this->phoneNumber = $anArray[4];
-	   $this->mobileNumber = $anArray[5];
-	   $this->emailAddress = $anArray[6];
+        $this->fullName = $anArray[name];
+	    $this->dob = $anArray[dob];
+	    $this->address = $anArray[address];
+	    $this->postCode = $anArray[postCode];
+	    $this->phoneNumber = $anArray[phoneNumber];
+	    $this->mobileNumber = $anArray[mobileNumber];
+	    $this->emailAddress = $anArray[email];
      
      
      //teacher specific variables
