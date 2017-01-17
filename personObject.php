@@ -3,14 +3,14 @@
 class person {
     
     //person properties
-    protected $personPK;
-    private $fullName;
-    private $dob;
-    private $address;
-    private $postCode;
-    private $phoneNumber;
-    private $mobileNumber;
-    private $emailAddress;
+//    protected $personPK;
+    protected $fullName;
+    protected $dob;
+    protected $address;
+    protected $postCode;
+    protected $phoneNumber;
+    protected $mobileNumber;
+    protected $emailAddress;
     
     //Constructs a new person object with a Name, Date of Birth and address
     
@@ -19,15 +19,14 @@ class person {
     public function __construct($anArray)
     {
         
-        $this->fullName = $anArray[0];
-	 $this->dob = $anArray[1];
-	 $this->address = $anArray[2];
-	 $this->postCode = $anArray[3];
-	 $this->phoneNumber = $anArray[4];
-	 $this->mobileNumber = $anArray[5];
-	 $this->emailAddress = $anArray[6];
-        
-        
+        $this->fullName = $anArray[name];
+	    $this->dob = $anArray[dob];
+	    $this->address = $anArray[address];
+	    $this->postCode = $anArray[postCode];
+	    $this->phoneNumber = $anArray[phoneNumber];
+	    $this->mobileNumber = $anArray[mobileNumber];
+	    $this->emailAddress = $anArray[email];
+                
 //        $this->personPK = 1;
 //        $this->fullName = $aName;
 //        $this->dob = $aDob;
