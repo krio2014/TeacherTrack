@@ -11,11 +11,9 @@ function testLog($array){
 	file_put_contents("Log.txt", "\r\n=====Begin test====\r\n", FILE_APPEND);
 	foreach ($array as &$value) 
 	{
-//		var_dump($value);
+
 		$date =  date("Y-m-d H:i:s");   
-//		echo 'array'.$array($line);
 		$text = $date.': '.$value."\r\n";
-//		fwrite($myfile, $text);
 		file_put_contents("Log.txt", $text, FILE_APPEND);
 	}
 	file_put_contents("Log.txt", "=====end test====", FILE_APPEND);
