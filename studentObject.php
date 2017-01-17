@@ -1,7 +1,7 @@
 <?php
 require_once 'personObject.php';
 require_once 'subjectObject.php';
-require_once 'index2.php';
+//require_once 'index2.php';
 
 //This class inherits from personObject.php so will implement all variables from there.
 
@@ -12,17 +12,22 @@ class student extends person{
     protected $tutorGroup;
     protected $enrolledSubjects;
 
-    public function __construct($aName,$aDob,$aAddress,$aPostCode,$aPhoneNumber,$aMobileNumber, $aEmailAddress)
+	
+	/*
+	*	
+	*
+	*/
+    public function __construct($anArray)
     {
-        $this->personPK = 2;
-        $this->fullName = $aName;
-        $this->dob = $aDob;
-        $this->address = $aAddress;
-        $this->postCode = $aPostCode;
-        $this->phoneNumber = $aPhoneNumber;
-        $this->mobileNumber = $aMobileNumber;
-        $this->emailAddress = $aEmailAddress;
-        
+        //variable assignments added by the passed array to this constructor
+		$this->fullName = $anArray[0];
+		$this->dob = $anArray[1];
+		$this->address = $anArray[2];
+		$this->postCode = $anArray[3];
+		$this->phoneNumber = $anArray[4];
+		$this->mobileNumber = $anArray[5];
+		$this->emailAddress = $anArray[6];
+		      
         //student specific variable assignment
         $this->yearGroup = "4a";
         $this->tutorGroup = "4a";
