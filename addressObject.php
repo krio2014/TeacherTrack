@@ -35,13 +35,11 @@ class address{
 			case 1:
         		$student = new student($aPerson);
 				$this->people[] = $student;
-//				var_dump($this->people);
         		break;
     		// add a teacher
 			case 2:
         		$teacher = new teacher($aPerson);
 				$this->people[] = $teacher;
-//				var_dump($this->people);
         		break;
 			case 2:
 				$parent = new parent($aPerson);
@@ -49,18 +47,15 @@ class address{
 				break;
 	   		}
         
-//        $this->people[] = $aPerson;
-//        $length = count($people)-1;
-//        return $this->people;    
     }
     
     /*
     *   Removes the selected person from the people array
     */
-    public function removePerson($aPerson)
+    public function removePerson($aName)
     {
         echo 'gets here';
-        if($this->people[$aPerson])
+        if($this->people[name])
         {
             unset($this->people[$aPerson]);
             echo $aPerson.' removed';
@@ -77,6 +72,20 @@ class address{
 	function getPerson($index)
     {
         return $this->people[$index];
+    }
+    
+    function find($aName)
+    {
+        foreach($this->getPeople() as $person)
+        {
+    
+            if($name = $person->getName() == $aName)
+            {
+                
+                return $person;
+            }
+            
+        }
     }
 	
     /*
