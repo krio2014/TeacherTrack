@@ -1,5 +1,9 @@
 <?php
 
+require_once('personObject.php');
+require_once('studentObject.php');
+require_once('teacherObject.php');
+
 class address{
     
     public $people;
@@ -15,11 +19,35 @@ class address{
     *   pre condition - $aPerson should be a person object 
     *   that has already been initialised 
 	*/
-    public function addPerson($aPerson)
+    public function addPerson($aPerson, $aType)
     {
-        $this->people[] = $aPerson;
-        $length = count($people)-1;
-        return $this->people;    
+        switch ($aType) {
+    		// add a person object
+			case 0:
+				$person = new person($aPerson);
+				$this->people[] = $person;
+				break;
+    		// add a student
+			case 1:
+        		$student = new student($aPerson);
+				$this->people[] = $student;
+//				var_dump($this->people);
+        		break;
+    		// add a teacher
+			case 2:
+        		$teacher = new teacher($aPerson);
+				$this->people[] = $teacher;
+//				var_dump($this->people);
+        		break;
+			case 2:
+				$parent = new parent($aPerson);
+				$this->people[] = $parent;
+				break;
+	   		}
+        
+//        $this->people[] = $aPerson;
+//        $length = count($people)-1;
+//        return $this->people;    
     }
     
     /*
