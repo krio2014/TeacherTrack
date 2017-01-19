@@ -16,17 +16,17 @@ class student extends person{
     public function __construct($anArray)
     {
         // generic person object variables
-        $this->fullName = $anArray[name];
-	    $this->dob = $anArray[dob];
-	    $this->address = $anArray[address];
-	    $this->postCode = $anArray[postCode];
-	    $this->phoneNumber = $anArray[phoneNumber];
-	    $this->mobileNumber = $anArray[mobileNumber];
-	    $this->emailAddress = $anArray[email];
+        $this->fullName = $anArray['name'];
+	    $this->dob = $anArray['dob'];
+	    $this->address = $anArray['address'];
+	    $this->postCode = $anArray['postcode'];
+	    $this->phoneNumber = $anArray['phoneNumber'];
+	    $this->mobileNumber = $anArray['mobileNumber'];
+	    $this->emailAddress = $anArray['email'];
         
         //student specific variable assignment
-        $this->tutorGroup = $anArray[tutorGroup];
-        $this->yearGroup = $anArray[yearGroup];
+        $this->tutorGroup = $anArray['tutorGroup'];
+        $this->yearGroup = $anArray['yearGroup'];
     
         //automatically generated variables
         

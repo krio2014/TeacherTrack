@@ -7,15 +7,15 @@ echo '<pre>';
 
 
 // new array for student info
-$array = array(name=>"adam",
-               dob=>"03/06/1987",
-               address=>"328 worlemoor", 
-               postcode=>"BS247AH", 
-               phoneNumber => "01275 400 650",
-               mobileNumber => "07896986986", 
-               email => "adam@msn.com",
-               tutorGroup=>"4a", 
-               yearGroup =>"11");
+$array = array('name'=>"adam",
+               'dob'=>"03/06/1987",
+               'address'=>"328 worlemoor", 
+              'postcode'=>"BS247AH", 
+               'phoneNumber' => "01275 400 650",
+               'mobileNumber' => "07896986986", 
+               'email' => "adam@msn.com",
+               'tutorGroup'=>"4a", 
+               'yearGroup' =>"11");
 
 //var_dump($array);
 
