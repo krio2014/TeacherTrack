@@ -17,22 +17,26 @@ echo '<pre>';
 echo '</pre>';
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
+    
     var_dump($_POST['staff']);
     try{
     
             $subject = "In bound call: ".$_POST['subject'];
             $fullname = "inbound call";
             $email = "support@ekeepergroup.com";
-            $contentsDate = date("Y/m/d");
-            $contents = $contentsDate.trim($_POST['contents']);
+            $contentsDate = date("d/m/Y");
+            $contents = ' '.$contentsDate.trim($_POST['contents']);
             $departmentid = "5";
             $ticketstatusid = $_POST['status'];//"1";
             $ticketpriorityid = "1";
             $tickettypeid = "1";
             $staffid = trim($_POST['staff']);
             $ownerstaffid = trim($_POST['staff']);
+            $company =$_POST['company'];
             $post_data = array('subject' => $subject,
+                               
             'fullname' => $fullname,
+            '$3$' => $company,                
             'email' => $email,
             'contents' => $contents,
             'departmentid' => $departmentid,
@@ -71,12 +75,10 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             echo $e;
     }
 }
-else
-{
-    
+
 
 //    echo 'failed';
-}
+
 
     
     
@@ -105,7 +107,8 @@ else
                 Staff Member:
             </label>
             <select name="staff">
-              <option value="11">charlie</option>
+              <option value="0">Not specified</option>
+                <option name="charlie" value="11">charlie</option>
               <option value="3">adam</option>
               <option value="2">jordan</option>
               <option value="10">Dan</option>
@@ -119,11 +122,11 @@ else
         <input type="text" name="customer"/><br/>
         <label>
             Company name:
-        </label>
+        </label><br/>
         <textarea name="company" rows="10" col="10000">some notes</textarea><br/>
         <label>
             Notes:
-        </label>
+        </label><br/>
         <input type="text" id="contents" name="contents" value="asdasda"><br/>
         <label>
             Select ticket status:
