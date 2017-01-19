@@ -69,9 +69,11 @@ class address{
 	/*
     * returns a person object from the people array at the provided index
     */
-	function getPerson($index)
+	function getPerson($aPerson)
     {
-        return $this->people[$index];
+        
+		
+		return $this->people[$index];
     }
     
     function find($aName)
