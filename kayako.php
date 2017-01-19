@@ -25,8 +25,8 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             $fullname = "inbound call";
             $email = "support@ekeepergroup.com";
             $contentsDate = date("d/m/Y");
-            $contents = ' '.$contentsDate.trim($_POST['contents']);
-            $departmentid = "5";
+            $contents = ':'.$contentsDate.trim($_POST['contents']);
+            $departmentid = "2";
             $ticketstatusid = $_POST['status'];//"1";
             $ticketpriorityid = "1";
             $tickettypeid = "1";
