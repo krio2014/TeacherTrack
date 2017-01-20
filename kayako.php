@@ -8,24 +8,21 @@ $signature = base64_encode(hash_hmac('sha256',$salt,$secretKey,true));
 echo '<pre>';
 
 
-//$temp = trim($_POST['contents']);
-//var_dump($_POST);
-
 //print_r($_SERVER['REQUEST_METHOD']);
 //print_r($_SERVER['REQUEST_TIME']);
-//var_dump($_POST['contents']);
+
 echo '</pre>';
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
     
-    var_dump($_POST['staff']);
+//    var_dump($_POST['subject']);
     try{
     
             $subject = "In bound call: ".$_POST['subject'];
             $fullname = "inbound call";
             $email = "support@ekeepergroup.com";
             $contentsDate = date("d/m/Y");
-            $contents = ':'.$contentsDate.trim($_POST['contents']);
+            $contents = $contentsDate.': '.trim($_POST['contents']);
             $departmentid = "2";
             $ticketstatusid = $_POST['status'];//"1";
             $ticketpriorityid = "1";
@@ -36,7 +33,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             $post_data = array('subject' => $subject,
                                
             'fullname' => $fullname,
-            '$3$' => $company,                
+            'ulxvszyap1p6' => $company,                
             'email' => $email,
             'contents' => $contents,
             'departmentid' => $departmentid,
@@ -47,11 +44,13 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             'ownerstaffid' =>$ownerstaffid,
             'apikey' => $apiKey,
             'salt' => $salt,
+			'<Company Name>' =>	$_POST['company'],
             'signature' => $signature);
+			
 
             $post_data = http_build_query($post_data, '', '&');
             echo '<pre>';
-//            var_dump($post_data);
+            var_dump($post_data);
 
             $curl = curl_init($apiUrl);
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
@@ -65,10 +64,10 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
             $response = curl_exec($curl);  
             var_dump($response);
-            echo "post succesful";
+
 
             curl_close($curl);
-            echo "post succesful";
+
         }
         catch(Exception $e)
         {
@@ -93,16 +92,16 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 ?>
 
 <html><body>
-    <div id="form">
+    
     <form method="POST" name="callForm" action="kayako.php" >
         
-        <div id="row">
-            <div id="row">
+       
+            
             <label>
                 Subject:    
             </label>
                 <input type="text" name="subject"><br/>
-            </div>
+          
             <label>
                 Staff Member:
             </label>
@@ -114,7 +113,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
               <option value="10">Dan</option>
               <option value="5">Development</option>
             </select>
-        </div>
+     
         <br/>
         <Label>
             Customer Name:
@@ -123,11 +122,11 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         <label>
             Company name:
         </label><br/>
-        <textarea name="company" rows="10" col="10000">some notes</textarea><br/>
+        <textarea name="company" rows="10" col="10000"></textarea><br/>
         <label>
             Notes:
         </label><br/>
-        <input type="text" id="contents" name="contents" value="asdasda"><br/>
+        <input type="text" id="contents" name="contents" value=""><br/>
         <label>
             Select ticket status:
         </label><br/>
@@ -140,7 +139,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     
     
     
-    </form></div>
+    </form>
     </body></html>
 
 
