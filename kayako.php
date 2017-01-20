@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
             $post_data = http_build_query($post_data, '', '&');
             echo '<pre>';
-            var_dump($post_data);
+//            var_dump($post_data);
 
             $curl = curl_init($apiUrl);
             curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
@@ -63,7 +63,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 //                var_dump($curl);
 
             $response = curl_exec($curl);  
-            var_dump($response);
+//            var_dump($response);
 
 
             curl_close($curl);
@@ -121,26 +121,29 @@ if($_SERVER['REQUEST_METHOD']=='POST')
         <input type="text" name="customer"/><br/>
         <label>
             Company name:
-        </label><br/>
-        <textarea name="company" rows="10" col="10000"></textarea><br/>
+        </label>
+        <input type="text" name="company" ></textarea><br/>
         <label>
             Notes:
         </label><br/>
-        <input type="text" id="contents" name="contents" value=""><br/>
+		<textarea id="contents" name="contents" value="" rows="10" col="10000"></textarea><br/>
         <label>
             Select ticket status:
         </label><br/>
          <input type="radio" name="status" value="45"> New<br>
         <input type="radio" name="status" value="44" checked> Completed<br>
   
-<!--        <textarea row="30" col="100" name="contents" >asdasdasd</textarea><br/>-->
+
         <input type="submit">
-<!--        <input type="reset" value="clear">-->
+        <input type="reset" value="clear">
     
     
     
     </form>
-    </body></html>
+    
+	</body>
+
+</html>
 
 
 
