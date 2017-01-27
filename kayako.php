@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             $subject = "In bound call: ".$_POST['subject'];
             $fullname = "inbound call";
             $email = "support@ekeepergroup.com";
-            $contentsDate = date("d/m/Y");
+            $contentsDate = $_POST['date'].':';
             $contents = $contentsDate.': '.trim($_POST['contents']);
             $departmentid = "2";
             $ticketstatusid = $_POST['status'];//"1";
@@ -31,6 +31,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             $ownerstaffid = trim($_POST['staff']);
             $company =$_POST['company'];
             $post_data = array('subject' => $subject,
+							   
                                
             'fullname' => $fullname,
             'ulxvszyap1p6' => $company,                
@@ -123,7 +124,9 @@ if($_SERVER['REQUEST_METHOD']=='POST')
             Company name:
         </label>
         <input type="text" name="company" ></textarea><br/>
-        <label>
+    	<label>Date:</label>    
+	<input type="text" name="date" /><br/>
+	<label>
             Notes:
         </label><br/>
 		<textarea id="contents" name="contents" value="" rows="10" col="10000"></textarea><br/>
