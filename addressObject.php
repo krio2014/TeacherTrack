@@ -54,11 +54,18 @@ class address{
     */
     public function removePerson($aName)
     {
-        echo 'gets here';
-        if($this->people[name])
+        $queryName = $aName;
+        $compareName = $this->find($aName)->getName();
+
+        
+//        var_dump($this->people);
+        
+        if($queryName == $compareName)
         {
-            unset($this->people[$aPerson]);
-            echo $aPerson.' removed';
+            $personObject = $this->find($aName);
+            var_dump($personObject);
+            unset($this->people[$personObject]);
+            echo $aName." has been removed succesfully.<br/>";
         }
         else
         {
@@ -69,13 +76,6 @@ class address{
 	/*
     * returns a person object from the people array at the provided index
     */
-	function getPerson($aPerson)
-    {
-        
-		
-		return $this->people[$index];
-    }
-    
     function find($aName)
     {
         foreach($this->getPeople() as $person)

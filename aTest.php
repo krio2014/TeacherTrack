@@ -16,20 +16,24 @@ $array = array('name'=>"adam",
                'email' => "adam@msn.com",
                'tutorGroup'=>"4a", 
                'yearGroup' =>"11");
-
 //var_dump($array);
 
 //new student object
 $address = new address();
+// adds a person to the address book and marks them as a student
 $address->addPerson($array,1);
 //$address->addPerson($array,1);
 
-//array of people objects
+//Test getPeople Function in addressBook()
 $people= $address->getPeople();
-//var_dump($arrayOfStudentObjects);
 
-$result = $address->find("adam");
-var_dump($result->getName());
+//Test find function on addressBook object
+$person = $address->find(adam);
+//var_dump($person);
+
+$address->removePerson("adam");
+var_dump($address->getPeople());
+
 
 
 
