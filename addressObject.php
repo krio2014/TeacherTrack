@@ -25,7 +25,9 @@ class address{
 	*/
     public function addPerson($aPerson, $aType)
     {
-        switch ($aType) {
+        try{
+			
+			switch ($aType) {
     		// add a person object
 			case 0:
 				$person = new person($aPerson);
@@ -46,6 +48,11 @@ class address{
 				$this->people[] = $parent;
 				break;
 	   		}
+		}
+		catch(Exception $e)
+		{
+			echo 'There appears to have been an error: </p>'.$e;
+		}
         
     }
     
@@ -56,16 +63,23 @@ class address{
     {
         $queryName = $aName;
         $compareName = $this->find($aName)->getName();
-
+//		var_dump($compareName);
         
 //        var_dump($this->people);
         
         if($queryName == $compareName)
         {
             $personObject = $this->find($aName);
-            var_dump($personObject);
-            unset($this->people[$personObject]);
-            echo $aName." has been removed succesfully.<br/>";
+			$key = array_search($personObject, $this->people);
+            var_dump($key);
+//			var_dump($this->people);
+            unset($this->people[$key]);
+			
+			//Checks if the person object still exists
+            if(!$this->find($aName))
+			{
+				echo $aName." has been removed succesfully.<br/>";
+			}
         }
         else
         {
