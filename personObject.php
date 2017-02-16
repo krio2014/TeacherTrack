@@ -5,6 +5,8 @@ class person {
     //person properties
 //    protected $personPK;
     protected $fullName;
+	protected $firstName;
+	protected $lastName;
     protected $dob;
     protected $address;
     protected $postCode;

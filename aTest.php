@@ -25,6 +25,8 @@ $address->addPerson($array,1);
 $address->addPerson($array,1);
 //$address->addPerson($array,1);
 
+//var_dump($address->people);
+
 //Test getPeople Function in addressBook()
 $people= $address->getPeople();
 

@@ -63,16 +63,16 @@ class address{
     {
         $queryName = $aName;
         $compareName = $this->find($aName)->getName();
-//		var_dump($compareName);
+
         
-//        var_dump($this->people);
+
         
         if($queryName == $compareName)
         {
             $personObject = $this->find($aName);
 			$key = array_search($personObject, $this->people);
-            var_dump($key);
-//			var_dump($this->people);
+
+
             unset($this->people[$key]);
 			
 			//Checks if the person object still exists
