@@ -7,11 +7,13 @@ require_once('teacherObject.php');
 class address{
     
     public $people;
+    public $yearGroup;
         
     //Constructs a new address object
     public function __construct()
     {
         $this->people = array();
+        $this->yearGroup = array();
 		return true;
     }
 
@@ -71,14 +73,16 @@ class address{
         {
             $personObject = $this->find($aName);
 			$key = array_search($personObject, $this->people);
-
+            
 
             unset($this->people[$key]);
 			
 			//Checks if the person object still exists
+            
             if(!$this->find($aName))
 			{
-				echo $aName." has been removed succesfully.<br/>";
+                
+//                				echo $aName." has been removed succesfully.<br/>";
 			}
         }
         else
@@ -87,16 +91,33 @@ class address{
         }
     }
 	
+    /*
+    *   Adds a year group by the name of the provided parameter
+    */
+    public function addYearGroup($aYearGroup)
+    {
+        
+    }
+    
+    /*
+    *   Removes a year group by the name of the provided parameter
+    */
+    public function removeYearGroup($aYearGroup)
+    {
+        
+    }
+    
 	/*
     * returns a person object from the people array at the provided index
     */
-    function find($aName)
+    public function find($aName)
     {
         foreach($this->getPeople() as $person)
         {
     
             if($name = $person->getName() == $aName)
             {
+                echo'is here';
                 
                 return $person;
             }
@@ -105,13 +126,16 @@ class address{
     }
 	
     /*
-    *   returns the people array
+    *   returns a people array
     */
 	public function getPeople()
     {
 		return $this->people;
 	}
-	
+    
+	/*
+    *   returns the length of the $people array
+    */
     function getLength()
 	{
 			

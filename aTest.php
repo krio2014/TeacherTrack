@@ -22,7 +22,7 @@ $array = array('name'=>"adam",
 $address = new address();
 // adds a person to the address book and marks them as a student
 $address->addPerson($array,1);
-$address->addPerson($array,1);
+//$address->addPerson($array,1);
 //$address->addPerson($array,1);
 
 //var_dump($address->people);
@@ -33,9 +33,9 @@ $people= $address->getPeople();
 //Test find function on addressBook object
 $person = $address->find('adam');
 //var_dump($person);
-
+var_dump($address->getPeople());
 $address->removePerson("adam");
-//var_dump($address->getPeople());
+var_dump($address->getPeople());
 
 
 
