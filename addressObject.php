@@ -92,11 +92,27 @@ class address{
     }
 	
     /*
-    *   Adds a year group by the name of the provided parameter
+    *   First checks the yearGroup array to see if $aYearGroup already exists, if it doesn't then aYearGroup is added, otherwise warns the user
     */
     public function addYearGroup($aYearGroup)
-    {
-        
+    {	
+		$exists = null;
+		
+		foreach($this->getYearGroup() as $theYearGroup)
+		{
+			if($theYearGroup == $aYearGroup)
+			{
+				$exists = true;
+			}
+		}
+		if($exists != true)
+		{
+			$this->yearGroup[] = $aYearGroup;	
+		}
+		else
+		{
+			echo "yeargroup <b>".$aYearGroup."</b> already exists!";
+		}
     }
     
     /*
@@ -104,8 +120,28 @@ class address{
     */
     public function removeYearGroup($aYearGroup)
     {
-        
-    }
+
+        $test = $this->getYearGroup();
+		var_dump($test);
+		$exists = false;
+		
+		foreach($test as $theYearGroup)
+		{
+
+			if($theYearGroup == $aYearGroup)
+			{
+				echo ("gets here");
+				$exists = true;
+				$key = array_search($aYearGroup, $this->yearGroup);
+            	unset($this->yearGroup[$key]);
+				
+			}
+		}
+		if($exists =false)
+		{
+			echo ($aYearGroup." does not exist, so we cannot remove it");
+		}
+	}
     
 	/*
     * returns a person object from the people array at the provided index
@@ -117,7 +153,7 @@ class address{
     
             if($name = $person->getName() == $aName)
             {
-                echo'is here';
+//                echo'is here';
                 
                 return $person;
             }
@@ -126,17 +162,25 @@ class address{
     }
 	
     /*
-    *   returns a people array
+    *   Returns a people array
     */
 	public function getPeople()
     {
 		return $this->people;
 	}
+	
+	/*
+	*	Returns the yearGroup array
+	*/
+	public function getYearGroup()
+	{
+		return $this->yearGroup;
+	}
     
 	/*
     *   returns the length of the $people array
     */
-    function getLength()
+    private function getLength()
 	{
 			
 		return count($this->people);
