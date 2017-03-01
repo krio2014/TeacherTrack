@@ -177,12 +177,4 @@ class address{
 		return $this->yearGroup;
 	}
     
-	/*
-    *   returns the length of the $people array
-    */
-    private function getLength()
-	{
-			
-		return count($this->people);
-	}
 }
