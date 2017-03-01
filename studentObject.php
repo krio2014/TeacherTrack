@@ -1,5 +1,6 @@
 <?php
 require_once 'personObject.php';
+require 'addressObject.php';
 //require_once 'subjectObject.php';
 //require_once 'index2.php';
 
@@ -11,12 +12,14 @@ class student extends person{
     protected $studentPK;
     protected $yearGroup;
     protected $tutorGroup;
+    protected $subjects;
     
 
     public function __construct($anArray)
     {
         // generic person object variables
         $this->fullName = $anArray['name'];
+        $this->firstName = $anArray['firstName'];
 	    $this->dob = $anArray['dob'];
 	    $this->address = $anArray['address'];
 	    $this->postCode = $anArray['postcode'];
@@ -27,18 +30,9 @@ class student extends person{
         //student specific variable assignment
         $this->tutorGroup = $anArray['tutorGroup'];
         $this->yearGroup = $anArray['yearGroup'];
-    
+        $this->subjects =  $anArray['subjects'];
         //automatically generated variables
         
-    }
-    
-    
-    /*
-	*	Returns a string representation of $this student object.
-	*/
-    public function toString()
-    {
-           return 'Ref: '.$this->personPK.'<br/>Name: '.$this->fullName.'<br/>Date of Birth: '.$this->dob.'<br/>Address: '.$this->address.'<br/>Postcode: '.$this->postCode.'<br/>Phone Number: '.$this->phoneNumber.'<br/>Mobile Number: '.$this->mobileNumber.'<br/>Email Address: '.$this->emailAddress.'<br/>Year Group:'.$this->yearGroup.'<br/>Tutor Group:'.$this->tutorGroup.'<br/>Subject: '.$this->subject;
     }
     
     /*
@@ -46,6 +40,7 @@ class student extends person{
 	*/
     public function addSubject($aSubject,$aSubjectList)
     {	
+        
         
         try
         {
@@ -85,9 +80,37 @@ class student extends person{
 	/*
 	*	returns the subjects that $this student is enrolled on.
 	*/
-    public function getEnrolledSubjects()
+//    public function getEnrolledSubjects()
+//    {
+//        return $this->enrolledSubjects;
+//    }
+    
+    /*
+    *
+    */
+    public function addYearGroup($aYearGroup)
     {
-        return $this->enrolledSubjects;
+
+//        var_dump($temp);
+        
+        if(empty($this->yearGroup))
+        {
+            $this->yearGroup = $aYearGroup;
+//            echo '<b>'.$this->getName().'</b> has been assigned to '.$aYearGroup;
+        }
+        else
+        {
+            echo '<p/>Error: <b>'.$this->getName().'</b> is already assigned to a year group<p/>';
+        }
+    }
+    
+    /*
+    *
+    */
+    public function getYearGroup()
+    {
+        
+        return $this->yearGroup;
     }
 }
 

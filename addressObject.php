@@ -63,13 +63,13 @@ class address{
     */
     public function removePerson($aName)
     {
-        $queryName = $aName;
-        $compareName = $this->find($aName)->getName();
-
         
-
+        $aPerson = $this->find(ucfirst ($aName));
+//        $aPerson->getName();
+        $compareName = $aPerson->getName();
         
-        if($queryName == $compareName)
+        
+        if($aName == $compareName)
         {
             $personObject = $this->find($aName);
 			$key = array_search($personObject, $this->people);
@@ -81,8 +81,7 @@ class address{
             
             if(!$this->find($aName))
 			{
-                
-//                				echo $aName." has been removed succesfully.<br/>";
+//                echo $aName." has been removed succesfully.<br/>";
 			}
         }
         else
@@ -98,7 +97,7 @@ class address{
     {	
 		$exists = null;
 		
-		foreach($this->getYearGroup() as $theYearGroup)
+		foreach($this->getYearGroups() as $theYearGroup)
 		{
 			if($theYearGroup == $aYearGroup)
 			{
@@ -111,7 +110,7 @@ class address{
 		}
 		else
 		{
-			echo "yeargroup <b>".$aYearGroup."</b> already exists!";
+			echo "Error: ".$aYearGroup." was not added -  already exists!<p/>";
 		}
     }
     
@@ -121,8 +120,7 @@ class address{
     public function removeYearGroup($aYearGroup)
     {
 
-        $test = $this->getYearGroup();
-		var_dump($test);
+        $test = $this->getYearGroups();
 		$exists = false;
 		
 		foreach($test as $theYearGroup)
@@ -130,16 +128,22 @@ class address{
 
 			if($theYearGroup == $aYearGroup)
 			{
-				echo ("gets here");
+//				echo ("gets here");
 				$exists = true;
 				$key = array_search($aYearGroup, $this->yearGroup);
             	unset($this->yearGroup[$key]);
 				
+                //Checks that the yearGroup has been removed succesfully
+                if($theYearGroup == $aYearGroup)
+                {
+//                    echo "<p/>".$aYearGroup." - succesfully removed!<p/>";
+                    return true;
+                }
 			}
 		}
-		if($exists =false)
+		if($exists == false)
 		{
-			echo ($aYearGroup." does not exist, so we cannot remove it");
+			echo ("<p>".$aYearGroup." does not exist, so it cannot be removed.<p/>");
 		}
 	}
     
@@ -148,19 +152,22 @@ class address{
     */
     public function find($aName)
     {
+
+        
         foreach($this->getPeople() as $person)
         {
-    
+
             if($name = $person->getName() == $aName)
             {
-//                echo'is here';
-                
                 return $person;
             }
+            
             
         }
     }
 	
+    //=====GETTERS=====//
+    
     /*
     *   Returns a people array
     */
@@ -172,7 +179,7 @@ class address{
 	/*
 	*	Returns the yearGroup array
 	*/
-	public function getYearGroup()
+	public function getYearGroups()
 	{
 		return $this->yearGroup;
 	}

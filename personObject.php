@@ -4,7 +4,7 @@ class person {
     
     //person properties
 //    protected $personPK;
-    protected $fullName;
+    
 	protected $firstName;
 	protected $lastName;
     protected $dob;
@@ -40,20 +40,25 @@ class person {
     }
     
     /*
-    *	Returns a string representation of this person object including reference number, Name, date of birth and address
-	*/
-    function toString()
-    {
-       return 'Ref: '.$this->personPK.'<br/>Name: '.$this->fullName.'<br/>Date of Birth: '.$this->dob.'<br/>Address: '.$this->address.'<br/>Postcode: '.$this->postCode.'<br/>Phone Number: '.$this->phoneNumber.'<br/>Mobile Number: '.$this->mobileNumber.'<br/>Email Address: '.$this->emailAddress;
-    }
-    
-    /*
 	*	Returns the name variable of this person object
 	*/
 	public function getName()
     {
-		return $this->fullName;
+		
+        
+        return $this->firstName;
+//        return $this->firstName;
+        
 	}
+    
+    /*
+    *
+    */
+    public function getFullName()
+    {
+        
+        $fullName = $this->firstName + $this->lastName; 
+    }
     
    /*
    *	Returns the date of birth of this person object
