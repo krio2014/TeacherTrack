@@ -65,8 +65,10 @@ class address{
     {
         
         $aPerson = $this->find(ucfirst ($aName));
-//        $aPerson->getName();
-        $compareName = $aPerson->getName();
+        if($aPerson !=null)
+        {
+            $compareName = ucfirst($aPerson->getName());
+        }
         
         
         if($aName == $compareName)
@@ -88,6 +90,7 @@ class address{
         {
             echo $aPerson.' does not exist';
         }
+        
     }
 	
     /*

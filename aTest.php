@@ -56,6 +56,7 @@ $person = $address->find('Adam');
 
 //=== TEST Retieving people array from address object
 $address->removePerson("Adam");
+//$address->removePerson("Adam");
 //var_dump($address->getPeople());
 
 //=== TEST adding year groups
