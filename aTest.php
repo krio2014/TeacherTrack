@@ -72,12 +72,12 @@ $address->addYearGroup("7e");
 //var_dump($address->getYearGroups());
 
 //=== TEST retrieving a year group
-$yearGroup = $address->getYearGroups;
+$yearGroup = $address->getYearGroups();
 //var_dump($yearGroup);
 
 //=== TEST removing a Year group
 $address->removeYearGroup("7t");
-//var_dump($address->getYearGroupss());
+//var_dump($address->getYearGroups());
 
 
 // echos the name of the class 

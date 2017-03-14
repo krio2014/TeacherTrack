@@ -3,6 +3,7 @@
 require_once('personObject.php');
 require_once('studentObject.php');
 require_once('teacherObject.php');
+//===NEED TO INCLUDE DB CONNECTION HERE
 
 class address{
     
@@ -79,8 +80,9 @@ class address{
 
             unset($this->people[$key]);
 			
+			//===DATABASE CODE GOES HERE
+			
 			//Checks if the person object still exists
-            
             if(!$this->find($aName))
 			{
 //                echo $aName." has been removed succesfully.<br/>";
@@ -110,6 +112,7 @@ class address{
 		if($exists != true)
 		{
 			$this->yearGroup[] = $aYearGroup;	
+			//===DATABASE CODE GOES HERE
 		}
 		else
 		{
@@ -136,6 +139,8 @@ class address{
 				$key = array_search($aYearGroup, $this->yearGroup);
             	unset($this->yearGroup[$key]);
 				
+				//===DATABASE CODE GOES HERE
+				
                 //Checks that the yearGroup has been removed succesfully
                 if($theYearGroup == $aYearGroup)
                 {
@@ -150,6 +155,19 @@ class address{
 		}
 	}
     
+	
+	
+    //=====GETTERS=====//
+    
+    /*
+    *   Returns a people array
+    */
+	public function getPeople()
+    {
+		return $this->people;
+	}
+	
+	
 	/*
     * returns a person object from the people array at the provided index
     */
@@ -169,15 +187,6 @@ class address{
         }
     }
 	
-    //=====GETTERS=====//
-    
-    /*
-    *   Returns a people array
-    */
-	public function getPeople()
-    {
-		return $this->people;
-	}
 	
 	/*
 	*	Returns the yearGroup array
