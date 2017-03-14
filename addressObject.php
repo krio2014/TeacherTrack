@@ -1,8 +1,8 @@
 <?php
 
-require_once('personObject.php');
-require_once('studentObject.php');
-require_once('teacherObject.php');
+//require_once('personObject.php');
+//require_once('studentObject.php');
+//require_once('teacherObject.php');
 //===NEED TO INCLUDE DB CONNECTION HERE
 
 class address{
